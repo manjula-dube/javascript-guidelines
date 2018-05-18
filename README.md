@@ -94,7 +94,7 @@ In ES6, we now have access to a terser implementation:
 ```javascript
 // String.repeat(numberOfRepetitions)
 'Manjula'.repeat(3); // 'ManjulaManjulaManjula'
-
+```
 
 ### Arrow Functions
 
