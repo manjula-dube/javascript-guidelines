@@ -58,6 +58,25 @@ that it needs to be carefully refactored. When working on a new codebase, use
 `let` for variables that will change their value over time, and `const` for
 variables which cannot be reassigned.
 
+### .includes( )
+
+```javascript
+var string = 'name';
+var substring = 'am';
+
+console.log(string.indexOf(substring) > -1);
+```
+
+Instead of checking for a return value `> -1` to denote string containment,
+we can simply use `.includes()` which will return a boolean:
+
+```javascript
+var string = 'name';
+var substring = 'am';
+
+console.log(string.includes(substring)); // true
+```
+
 
 ## Arrow Functions
 
