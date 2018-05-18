@@ -151,4 +151,4 @@ const squares = arr.map(x => x * x); // Arrow Function for terser implementation
 > **Best Practice**: Use **Arrow Functions** in place of function expressions
 when possible.
 
-<sup>[(back to table of contents)](#table-of-contents)</sup>
+
