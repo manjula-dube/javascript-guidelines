@@ -1,6 +1,6 @@
-# es6-cheatsheet
+# Best practices for javascript
 
-Best practices for javasc
+
 ## var versus let / const
 
 > Besides `var`, we now have access to two new identifiers for storing values
