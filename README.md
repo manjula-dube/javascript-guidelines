@@ -77,8 +77,26 @@ var substring = 'am';
 console.log(string.includes(substring)); // true
 ```
 
+### .repeat( )
 
-## Arrow Functions
+```javascript
+function repeat(string, count) {
+    var strings = [];
+    while(strings.length < count) {
+        strings.push(string);
+    }
+    return strings.join('');
+}
+```
+
+In ES6, we now have access to a terser implementation:
+
+```javascript
+// String.repeat(numberOfRepetitions)
+'Manjula'.repeat(3); // 'ManjulaManjulaManjula'
+
+
+### Arrow Functions
 
 Often times we have nested functions in which we would like to preserve the
 context of `this` from its lexical scope. An example is shown below:
