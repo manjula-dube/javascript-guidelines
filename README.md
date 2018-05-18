@@ -1,4 +1,4 @@
-# Best practices for javascript
+# Best practices for Javascript
 
 
 ## var versus let / const
