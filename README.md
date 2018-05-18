@@ -96,6 +96,68 @@ In ES6, we now have access to a terser implementation:
 'Manjula'.repeat(3); // 'ManjulaManjulaManjula'
 ```
 
+### Template Literals
+
+Using **Template Literals**, we can now construct strings that have special
+characters in them without needing to escape them explicitly.
+
+```javascript
+var text = "This string contains \"double quotes\" which are escaped.";
+```
+
+```javascript
+let text = `This string contains "double quotes" which don't need to be escaped anymore.`;
+```
+
+**Template Literals** also support interpolation, which makes the task of
+concatenating strings and values:
+
+```javascript
+var name = 'Tiger';
+var age = 13;
+
+console.log('My cat is named ' + name + ' and is ' + age + ' years old.');
+```
+
+Much simpler:
+
+```javascript
+const name = 'Tiger';
+const age = 13;
+
+console.log(`My cat is named ${name} and is ${age} years old.`);
+```
+
+In ES5, we handled new lines as follows:
+
+```javascript
+var text = (
+    'cat\n' +
+    'dog\n' +
+    'nickelodeon'
+);
+```
+
+Or:
+
+```javascript
+var text = [
+    'cat',
+    'dog',
+    'nickelodeon'
+].join('\n');
+```
+
+**Template Literals** will preserve new lines for us without having to
+explicitly place them in:
+
+```javascript
+let text = ( `cat
+dog
+nickelodeon`
+);
+```
+
 ### Arrow Functions
 
 Often times we have nested functions in which we would like to preserve the
@@ -156,6 +218,45 @@ Person.prototype.prefixName = function (arr) {
     }.bind(this));
 };
 ```
+
+## Destructuring
+
+Destructuring allows us to extract values from arrays and objects (even deeply
+nested) and store them in variables with a more convenient syntax.
+
+### Destructuring Arrays
+
+```javascript
+var arr = [1, 2, 3, 4];
+var a = arr[0];
+var b = arr[1];
+var c = arr[2];
+var d = arr[3];
+```
+
+```javascript
+let [a, b, c, d] = [1, 2, 3, 4];
+
+console.log(a); // 1
+console.log(b); // 2
+```
+
+### Destructuring Objects
+
+```javascript
+var details = { occupation: 'software engineer', name: 'manjula' };
+var occupation = details.occupation; // 'software engineer'
+var name = details.name; // 'anakin'
+```
+
+```javascript
+let details = { occupation: 'software engineer', name: 'manjula' };
+let {occupation, name} = details;
+
+console.log(occupation); // 'software engineer'
+console.log(name); // 'manjula'
+```
+
 
 Using **Arrow Functions**, the lexical value of `this` isn't shadowed and we
 can re-write the above as shown:
